@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Influencer Marketing Starter Guide สำหรับแก้ม</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%23fe5e15%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-size=%2730%27 font-family=%27Arial%27 font-weight=%27700%27 fill=%27white%27 text-anchor=%27middle%27%3EIG%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="assets/fonts/FCIconic-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Space Grotesk';src:url(assets/fonts/SpaceGrotesk-var.woff2) format("woff2");font-weight:300 700;font-display:swap}
+@font-face{font-family:'DM Sans';src:url(assets/fonts/DMSans-var.woff2) format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:'FC Iconic';size-adjust:136%;ascent-override:56.6%;descent-override:16.2%;line-gap-override:0%;src:url(assets/fonts/FCIconic-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:'FC Iconic';size-adjust:136%;ascent-override:56.6%;descent-override:16.2%;line-gap-override:0%;src:url(assets/fonts/FCIconic-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{
+ --bg:#f7f6f4;--s1:#fff;--s2:#f6f4f1;--s3:#e9e5e0;
+ --bd:hsla(0,0%,7%,.08);--bd2:hsla(0,0%,7%,.14);
+ --t1:#111;--t2:#45444a;--t3:#85838c;
+ --v:#fe5e15;--v3:#c24a0a;--bl:#1e51e5;--yl:#f5a623;--cy:#b1f8f5;--cy2:#7fe6e1;--gr:#059669;--re:#dc2626;
+ --mint:#eafaf9;--peach:#ffeee4;--cream:#fff7ec;--ink:#121212;--sky:#eef2ff;
+ --r:16px;--r-lg:22px;
+ --gtx:linear-gradient(120deg,#fe5e15,#f5a623);
+ --sh:0 2px 8px hsla(0,0%,7%,.06),0 10px 30px hsla(0,0%,7%,.07);
+ --sh2:0 1px 2px hsla(0,0%,7%,.05),0 4px 14px hsla(0,0%,7%,.08);
+ --display:'Space Grotesk','FC Iconic','Noto Sans Thai','Sarabun','Thonburi',sans-serif;
+ --head:'FC Iconic','Space Grotesk','Noto Sans Thai','Sarabun','Thonburi',sans-serif;
+ --body:'DM Sans','FC Iconic','Noto Sans Thai','Sarabun','Thonburi',-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);font-family:var(--body);color:var(--t1);-webkit-font-smoothing:antialiased;line-height:1.65;font-size:16.5px}
+a{color:var(--bl)}
+b{font-weight:700}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+#progress{position:fixed;left:0;top:0;height:4px;width:0;background:var(--gtx);z-index:60}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(247,246,244,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav.top .wrap{display:flex;align-items:center;gap:14px;height:58px}
+.brand{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.3px;text-decoration:none;color:var(--t1);white-space:nowrap}
+.brand .dot{width:12px;height:12px;border-radius:50%;background:var(--v)}
+.brand small{font-weight:500;color:var(--t3);font-size:13px}
+.navl{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.navl::-webkit-scrollbar{display:none}
+.navl a{flex:none;text-decoration:none;color:var(--t2);font-family:var(--head);font-size:14.5px;padding:6px 12px;border-radius:999px;border:1px solid transparent}
+.navl a.on,.navl a:hover{background:var(--s1);border-color:var(--bd2);color:var(--t1)}
+.navl a .n{font-family:var(--display);color:var(--v);font-weight:700;margin-right:4px}
+.hero{position:relative;overflow:hidden;padding:64px 0 54px}
+.hero .wrap{position:relative;z-index:2}
+.kick{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--t2)}
+.kick b{white-space:nowrap;background:var(--bl);color:#fff;border-radius:999px;padding:4px 13px;box-shadow:0 6px 18px rgba(30,81,229,.3);letter-spacing:1px}
+.kick b.or{background:var(--v);box-shadow:0 6px 18px rgba(254,94,21,.3)}
+.kick b.dk{background:var(--ink);box-shadow:none}
+.kick b.yl{background:var(--yl);box-shadow:0 6px 18px rgba(245,166,35,.3)}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(34px,6vw,58px);line-height:1.15;letter-spacing:-.5px;margin:16px 0 14px;max-width:780px}
+h1 .g{background:var(--gtx);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--t2);max-width:700px}
+.pop{position:absolute;pointer-events:none;background:no-repeat center/contain;z-index:1}
+.pop.orange{background-image:url(assets/img/pop-orange.webp)}
+.pop.blue{background-image:url(assets/img/pop-blue.webp)}
+.pop.yellow{background-image:url(assets/img/pop-yellow.webp)}
+.pop.fah{background-image:url(assets/img/pop-fah.webp)}
+.float{animation:fl 5s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
+.toc{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:34px}
+.toc a{display:block;text-decoration:none;color:var(--t1);background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:16px;box-shadow:var(--sh2);transition:transform .2s}
+.toc a:hover{transform:translateY(-3px)}
+.toc .n{font-family:var(--display);font-size:28px;font-weight:700;color:var(--v);line-height:1}
+.toc .t{font-family:var(--head);font-weight:700;font-size:16.5px;margin-top:6px;line-height:1.3}
+.toc .d{font-size:13.5px;color:var(--t3);margin-top:4px;line-height:1.45}
+section.sec{padding:56px 0 30px;border-top:1px solid var(--bd)}
+h2{font-family:var(--head);font-weight:700;font-size:clamp(26px,4vw,36px);line-height:1.22;margin:12px 0 8px;letter-spacing:-.2px}
+h2 .n{font-family:var(--display);color:var(--v);letter-spacing:-1px;margin-right:6px}
+.sub{color:var(--t2);font-size:17.5px;max-width:760px;margin-bottom:26px}
+h3{font-family:var(--head);font-weight:700;font-size:21px;line-height:1.3;margin:34px 0 12px;display:flex;align-items:center;gap:10px}
+h3 .i{flex:none;width:30px;height:30px;border-radius:10px;background:var(--v);color:#fff;font-family:var(--display);font-size:15px;display:flex;align-items:center;justify-content:center}
+h3 .i.b{background:var(--bl)}h3 .i.y{background:var(--yl)}h3 .i.k{background:var(--ink)}
+h4{font-family:var(--head);font-weight:700;font-size:17.5px;margin-bottom:6px;line-height:1.35}
+.card{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r-lg);box-shadow:var(--sh);padding:22px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+p+p{margin-top:8px}
+ul.clean,ol.clean{padding-left:20px}
+ul.clean li,ol.clean li{margin:4px 0}
+.muted{color:var(--t3);font-size:14px}
+.note{border-radius:var(--r);padding:14px 18px;font-size:15.5px;margin:16px 0;display:flex;gap:12px;align-items:flex-start}
+.note .ic{flex:none;font-size:20px;line-height:1.3}
+.note.tip{background:var(--mint);border:1px solid #c6efec}
+.note.warn{background:var(--peach);border:1px solid #ffd6c0}
+.note.info{background:var(--sky);border:1px solid #d6defc}
+.note.cream{background:var(--cream);border:1px solid #fbe3bf}
+.pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:3px 11px;font-size:13px;font-weight:500;background:var(--s2);border:1px solid var(--bd2);color:var(--t2);white-space:nowrap}
+.pill.or{background:var(--peach);border-color:#ffcfb5;color:var(--v3)}
+.pill.bl{background:var(--sky);border-color:#cdd8fb;color:var(--bl)}
+.pill.gr{background:#e7f8f0;border-color:#bfe9d4;color:var(--gr)}
+.pill.yl{background:var(--cream);border-color:#f8dca9;color:#a86b00}
+.pill.re{background:#fdecec;border-color:#f6c5c5;color:var(--re)}
+.ladder{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:end;margin:10px 0 6px}
+.step{background:var(--s1);border:1px solid var(--bd);border-radius:18px;padding:14px 12px;box-shadow:var(--sh2);position:relative;display:flex;flex-direction:column}
+.step .bar{border-radius:10px;margin-bottom:10px;background:var(--gtx)}
+.step .nm{font-family:var(--display);font-weight:700;font-size:16px;line-height:1.2}
+.step .th{font-family:var(--head);font-size:13px;color:var(--t3)}
+.step .fw{font-family:var(--display);font-weight:700;color:var(--v);font-size:15px;margin-top:4px}
+.step ul{padding-left:16px;font-size:13.5px;color:var(--t2);margin-top:6px;line-height:1.5}
+.axis{display:flex;justify-content:space-between;font-size:13px;color:var(--t3);margin-top:6px;font-family:var(--head)}
+.axis span:nth-child(2){flex:1;margin:0 10px;border-top:2px dashed var(--bd2);align-self:center}
+.tw{overflow-x:auto;border-radius:var(--r);border:1px solid var(--bd);background:var(--s1);box-shadow:var(--sh2);-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:640px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--bd);vertical-align:top}
+th{background:var(--s2);font-family:var(--head);font-weight:700;font-size:14px;color:var(--t2);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--display);text-align:right;white-space:nowrap}
+.edit td[contenteditable]{background:#fffdf9;outline:none;min-width:90px}
+.edit td[contenteditable]:focus{background:#fff4ec;box-shadow:inset 0 0 0 2px var(--v)}
+.edit td[contenteditable]:empty::before{content:attr(data-ph);color:#c3c0c8}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 0}
+.btn{font:inherit;font-family:var(--head);font-size:14px;cursor:pointer;border-radius:999px;padding:7px 15px;border:1px solid var(--bd2);background:var(--s1);color:var(--t1)}
+.btn:hover{filter:brightness(.96)}
+.gloss{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.term{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:14px 15px;box-shadow:var(--sh2)}
+.term .en{font-family:var(--display);font-weight:700;font-size:15.5px}
+.term .th{font-family:var(--head);color:var(--v3);font-size:14px}
+.term p{font-size:14.2px;color:var(--t2);margin-top:5px;line-height:1.55}
+.term .eg{font-size:13.2px;color:var(--t3);margin-top:4px}
+.search{width:100%;max-width:380px;font:inherit;font-size:15px;padding:10px 16px;border-radius:999px;border:1px solid var(--bd2);background:var(--s1);margin-bottom:14px}
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.vs .mid{display:flex;align-items:center;font-family:var(--display);font-weight:700;font-size:22px;color:var(--t3)}
+.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.fs{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:14px;box-shadow:var(--sh2);position:relative}
+.fs .no{font-family:var(--display);font-weight:700;font-size:24px;color:var(--v);line-height:1}
+.fs h4{font-size:15.5px;margin-top:6px}
+.fs p{font-size:13.6px;color:var(--t2);line-height:1.5}
+.fs .who{margin-top:8px;display:flex;flex-wrap:wrap;gap:4px}
+.fs .who .pill{font-size:11.5px;padding:2px 8px}
+.model{border-radius:var(--r-lg);overflow:hidden;background:var(--s1);border:1px solid var(--bd);box-shadow:var(--sh);margin-bottom:18px}
+.model .mh{padding:18px 22px;display:flex;gap:16px;align-items:center}
+.model .mh .big{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:#fff;width:64px;height:64px;border-radius:18px;display:flex;align-items:center;justify-content:center;flex:none}
+.model .mh h4{font-size:21px;margin:0}
+.model .mh p{color:var(--t2);font-size:15px}
+.m1 .mh{background:var(--cream)}.m1 .big{background:var(--yl)}
+.m2 .mh{background:var(--sky)}.m2 .big{background:var(--bl)}
+.m3 .mh{background:var(--peach)}.m3 .big{background:var(--v)}
+.model .mb{padding:18px 22px 22px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.box{background:var(--s2);border-radius:14px;padding:14px 16px;font-size:15px}
+.box h5{font-family:var(--head);font-size:15px;margin-bottom:6px;display:flex;gap:6px;align-items:center}
+.box ul,.box ol{padding-left:18px}
+.box li{margin:3px 0}
+.box.full{grid-column:1/-1}
+.box.ex{background:#fffaf3;border:1px dashed #f3c98d}
+.money{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-family:var(--head);font-size:15px;margin-top:6px}
+.money .blk{background:var(--s1);border:1px solid var(--bd2);border-radius:10px;padding:6px 10px}
+.money .op{color:var(--t3);font-family:var(--display);font-weight:700}
+.reco{background:linear-gradient(135deg,#fff7ec,#ffeee4);border:1px solid #ffd9bf;border-radius:var(--r-lg);padding:24px;position:relative;overflow:hidden}
+.reco .pop{right:-14px;top:-14px;width:110px;height:110px;opacity:.95}
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px;position:relative;z-index:2}
+.path .pp{background:rgba(255,255,255,.85);border-radius:16px;padding:14px;border:1px solid rgba(17,17,17,.07)}
+.path .pp .ph{font-family:var(--display);font-weight:700;color:var(--v);font-size:13px;letter-spacing:1px;text-transform:uppercase}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.kpi{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:16px;box-shadow:var(--sh2)}
+.kpi .v{font-family:var(--display);font-weight:700;font-size:28px;line-height:1.1}
+.kpi .l{font-size:13.5px;color:var(--t3);font-family:var(--head)}
+.kpi .s{font-size:12.5px;color:var(--t2);margin-top:4px}
+.report{border:2px dashed #f3c98d;border-radius:26px;padding:22px;background:#fffdf9;position:relative;margin-top:24px}
+.report .stamp{position:absolute;top:-14px;right:20px;background:var(--ink);color:#fff;font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:1.4px;border-radius:999px;padding:5px 14px}
+.bars{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.bars .r{display:grid;grid-template-columns:130px 1fr 70px;gap:10px;align-items:center;font-size:13.5px}
+.bars .t{height:14px;background:var(--s3);border-radius:999px;overflow:hidden}
+.bars .t i{display:block;height:100%;background:var(--gtx);border-radius:999px}
+.bars .r span:last-child{font-family:var(--display);text-align:right}
+.shots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.shot{aspect-ratio:9/16;max-height:260px;border-radius:14px;background:repeating-linear-gradient(45deg,#f1eee9,#f1eee9 10px,#ebe7e1 10px,#ebe7e1 20px);display:flex;align-items:center;justify-content:center;text-align:center;font-size:12.5px;color:var(--t3);padding:10px;border:1px solid var(--bd)}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tl{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);padding:14px;box-shadow:var(--sh2);border-top:5px solid var(--v)}
+.tl:nth-child(2){border-top-color:var(--yl)}.tl:nth-child(3){border-top-color:var(--bl)}.tl:nth-child(4){border-top-color:var(--cy2)}.tl:nth-child(5){border-top-color:var(--ink)}
+.tl .w{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:1px;color:var(--t3);text-transform:uppercase}
+.tl ul{padding-left:16px;font-size:13.8px;color:var(--t2);margin-top:6px}
+.prr{display:grid;grid-template-columns:repeat(4,1fr);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh)}
+.prr div{padding:18px 16px;color:#fff}
+.prr div:nth-child(1){background:var(--v)}.prr div:nth-child(2){background:#d98a0b}.prr div:nth-child(3){background:var(--bl)}.prr div:nth-child(4){background:var(--ink)}
+.prr .k{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:1.4px;opacity:.85;text-transform:uppercase}
+.prr h4{font-size:19px;margin:4px 0}
+.prr p{font-size:14px;opacity:.95;line-height:1.5}
+.script{background:var(--ink);color:#f3f1ee;border-radius:var(--r-lg);padding:22px 24px;font-size:16px;line-height:1.85}
+.script .lab{font-family:var(--display);font-size:12px;font-weight:700;letter-spacing:1.4px;color:var(--yl);text-transform:uppercase;margin-bottom:8px}
+.script mark{background:rgba(254,94,21,.25);color:#ffd3bd;border-radius:6px;padding:0 4px}
+.qa{display:flex;flex-direction:column;gap:10px}
+details{background:var(--s1);border:1px solid var(--bd);border-radius:var(--r);box-shadow:var(--sh2);overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:14px 18px;font-family:var(--head);font-weight:700;font-size:16px;display:flex;gap:10px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"+";flex:none;width:24px;height:24px;border-radius:50%;background:var(--peach);color:var(--v);display:flex;align-items:center;justify-content:center;font-family:var(--display)}
+details[open] summary::before{content:"–"}
+details .ans{padding:0 18px 16px 52px;font-size:15px;color:var(--t2)}
+.check{list-style:none;display:flex;flex-direction:column;gap:6px}
+.check label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-size:15.5px}
+.check input{margin-top:6px;accent-color:var(--v);width:17px;height:17px;flex:none}
+.outline{display:flex;flex-direction:column;gap:8px}
+.ol{display:grid;grid-template-columns:90px 1fr;gap:12px;background:var(--s1);border:1px solid var(--bd);border-radius:14px;padding:12px 14px;box-shadow:var(--sh2)}
+.ol .tm{font-family:var(--display);font-weight:700;color:var(--v);font-size:14px}
+.ol p{font-size:14.5px;color:var(--t2)}
+footer{padding:50px 0 60px;border-top:1px solid var(--bd);margin-top:30px;text-align:center;position:relative;overflow:hidden}
+.credit{display:inline-block;background:var(--s1);border:1px solid var(--bd);border-radius:var(--r-lg);padding:22px 28px;box-shadow:var(--sh);position:relative;z-index:2}
+.credit .ml{font-family:var(--display);font-size:14px;letter-spacing:.4px;color:var(--t3)}
+.credit .nm{font-family:var(--head);font-weight:700;font-size:22px;margin-top:6px}
+.credit .en{font-family:var(--display);color:var(--t2);font-size:15px}
+.credit .ro{margin-top:6px;font-size:14.5px;color:var(--v3);font-family:var(--head)}
+@media (max-width:900px){
+ .toc{grid-template-columns:repeat(2,1fr)}
+ .ladder{grid-template-columns:repeat(3,1fr)}
+ .ladder .step .bar{display:none}
+ .gloss,.g3{grid-template-columns:repeat(2,1fr)}
+ .flow{grid-template-columns:repeat(2,1fr)}
+ .kpis{grid-template-columns:repeat(2,1fr)}
+ .timeline{grid-template-columns:repeat(2,1fr)}
+ .prr{grid-template-columns:repeat(2,1fr)}
+ .shots{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:620px){
+ body{font-size:16px}
+ .brand small{display:none}
+ .ladder,.gloss,.g2,.g3,.path,.model .mb,.prr{grid-template-columns:1fr}
+ .vs{grid-template-columns:1fr}.vs .mid{justify-content:center}
+ .hero{padding:44px 0 40px}
+ .hero .pop{display:none}
+ .card,.reco,.report{padding:18px}
+ .model .mh{align-items:flex-start}
+ .model .mh .big{width:48px;height:48px;font-size:28px;border-radius:14px}
+ .bars .r{grid-template-columns:110px 1fr 54px}
+ .ol{grid-template-columns:1fr;gap:2px}
+ .shots{grid-template-columns:repeat(2,1fr)}
+}
+@media print{nav.top,#progress,.tools,.pop,.search{display:none!important}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<nav class="top"><div class="wrap">
+ <a class="brand" href="#top"><span class="dot"></span>popcont <small>· Influencer Starter Guide</small></a>
+ <div class="navl">
+  <a href="#s1"><span class="n">01</span>Tier & ศัพท์</a>
+  <a href="#s2"><span class="n">02</span>Scope งาน</a>
+  <a href="#s3"><span class="n">03</span>Report</a>
+  <a href="#s4"><span class="n">04</span>เล่าประสบการณ์</a>
+ </div>
+</div></nav>
+
+<header class="hero" id="top">
+ <div class="pop orange float" style="right:4%;top:40px;width:150px;height:150px"></div>
+ <div class="pop blue float" style="right:19%;top:170px;width:90px;height:90px;animation-delay:-2s"></div>
+ <div class="pop yellow float" style="right:7%;top:240px;width:76px;height:76px;animation-delay:-3.5s"></div>
+ <div class="wrap">
+  <span class="kick"><b class="or">FOR แก้ม</b>Influencer Marketing 101 → Coordinator</span>
+  <h1>เริ่มจากศูนย์ <span class="g">จนคุยกับทีมได้มั่นใจ</span></h1>
+  <p class="lead">ไกด์นี้ทำไว้ให้แก้มอ่านก่อนคุยกับทีม อ่านจบแล้วจะเข้าใจพื้นฐาน Influencer Marketing (การตลาดผ่านอินฟลูเอนเซอร์ หรือคนที่มีคนติดตามในโซเชียล) รู้ว่างานแต่ละแบบที่ทีมเคยทำเป็นยังไง คิดค่าบริการยังไง และเตรียมเรื่องเล่าของตัวเองได้ มีตารางให้กรอกเองได้ในหน้านี้ด้วย</p>
+  <div class="note tip" style="max-width:720px;margin-top:20px"><span class="ic">💡</span><div>จุดแข็งของแก้มคือ รับผิดชอบสูง รู้จักอินฟลูอยู่แล้วหลายคน เคยดีลเพื่อนที่เป็นอินฟลูให้คนอื่นมาแล้ว และดูคอนเทนต์ ดู Production (งานถ่ายทำ) ดูการตัดต่อเป็น ซึ่งเป็นสิ่งที่งานนี้ใช้จริง ที่ยังขาดคือประสบการณ์แบบเป็นงานเป็นการ ไกด์นี้ช่วยเติมส่วนนั้น</div></div>
+  <div class="toc">
+   <a href="#s1"><div class="n">01</div><div class="t">Tier & ศัพท์ที่ต้องรู้</div><div class="d">ระดับอินฟลู ศัพท์ในวงการ และตารางแมปเพื่อนอินฟลูของแก้ม</div></a>
+   <a href="#s2"><div class="n">02</div><div class="t">Scope งานที่ทีมเคยทำ</div><div class="d">3 รูปแบบการจ้าง ขั้นตอนทำงาน และวิธีคิดค่าบริการ</div></a>
+   <a href="#s3"><div class="n">03</div><div class="t">ตัวอย่าง Report</div><div class="d">หน้าตารายงานหลังจบแคมเปญ และต้องเก็บอะไรตอนไหน</div></a>
+   <a href="#s4"><div class="n">04</div><div class="t">เล่าประสบการณ์</div><div class="d">Framework เล่าเรื่อง สคริปต์แนะนำตัว และคำถามที่น่าจะโดนถาม</div></a>
+  </div>
+ </div>
+</header>
+
+<section class="sec" id="s1"><div class="wrap">
+ <span class="kick"><b>PART 01</b>Tiers · Terms · Network Map</span>
+ <h2><span class="n">01</span>ทำความรู้จัก Tier และศัพท์ที่ต้องรู้</h2>
+ <p class="sub">ในวงการจะแบ่งอินฟลูเป็น Tier (ระดับ ตามจำนวนคนติดตาม) เพราะแต่ละระดับเหมาะกับงานต่างกัน ค่าตัวต่างกัน และวิธีคุยต่างกัน รู้ตรงนี้แล้วจะคุยกับทีมและกับอินฟลูรู้เรื่องทันที</p>
+
+ <h3><span class="i">A</span>Tier ของอินฟลูเอนเซอร์ เรียงจากเล็กไปใหญ่</h3>
+ <div class="ladder">
+  <div class="step"><div class="bar" style="height:14px"></div><div class="nm">KOC / Seeding</div><div class="th">คนใช้จริงทั่วไป</div><div class="fw">ส่วนใหญ่ไม่ถึง 1K</div><ul><li>รีวิวแบบเพื่อนบอกต่อ</li><li>เน้นจำนวนคนเยอะ ให้เห็นกระจายทั่ว</li><li>มักเป็นงานแลกของ</li></ul></div>
+  <div class="step"><div class="bar" style="height:28px"></div><div class="nm">Nano</div><div class="th">อินฟลูจิ๋ว</div><div class="fw">~1K – 10K</div><ul><li>คนตามน้อยแต่สนิทกัน</li><li>คนดูมีส่วนร่วมสูง</li><li>คุยง่าย ยืดหยุ่น</li></ul></div>
+  <div class="step"><div class="bar" style="height:44px"></div><div class="nm">Micro</div><div class="th">อินฟลูเล็ก</div><div class="fw">~10K – 100K</div><ul><li>มีกลุ่มคนดูชัด เช่น สายสวย สายกิน</li><li>คุ้มค่าในหลายแคมเปญ</li><li>เริ่มมีเรตค่าตัวชัด</li></ul></div>
+  <div class="step"><div class="bar" style="height:62px"></div><div class="nm">Mid-tier</div><div class="th">อินฟลูกลาง</div><div class="fw">~100K – 500K</div><ul><li>คนรู้จักในวงกว้างขึ้น</li><li>งานโปรขึ้น เงื่อนไขเยอะขึ้น</li><li>บางคนมีผู้จัดการ</li></ul></div>
+  <div class="step"><div class="bar" style="height:82px"></div><div class="nm">Macro</div><div class="th">อินฟลูใหญ่</div><div class="fw">~500K – 1M</div><ul><li>สร้างการรับรู้ได้กว้าง</li><li>ส่วนใหญ่คุยผ่านผู้จัดการ</li><li>คิวแน่น ต้องจองล่วงหน้า</li></ul></div>
+  <div class="step"><div class="bar" style="height:104px"></div><div class="nm">Mega / Celebrity</div><div class="th">ดารา คนดัง</div><div class="fw">1M ขึ้นไป</div><ul><li>ใช้เปิดตัวสินค้า สร้างกระแส</li><li>สัญญาละเอียด งบสูง</li><li>คุยผ่านต้นสังกัด</li></ul></div>
+ </div>
+ <div class="axis"><span>คนสนิท น่าเชื่อ ราคาเข้าถึงง่าย</span><span></span><span>คนเห็นกว้าง ราคาสูงขึ้น</span></div>
+ <div class="note info"><span class="ic">📏</span><div>ช่วงตัวเลขนี้เป็นเกณฑ์คร่าว ๆ ที่ใช้กันทั่วไป (K = พัน, M = ล้าน คนติดตาม) แต่ละเอเจนซีและแต่ละแพลตฟอร์มแบ่งไม่เหมือนกันเป๊ะ เวลาคุยงานจริงให้ถามทีมว่าแคมเปญนี้นับยังไง ทีมมักพูดเป็น "10K+ กี่คน 100K+ กี่คน" ส่วนค่าตัวแต่ละ Tier ขึ้นกับแพลตฟอร์ม สายคอนเทนต์ และช่วงเวลา ไกด์นี้เลยไม่ใส่ราคา ให้เช็กเรตจริงตอนติดต่อแต่ละคน</div></div>
+
+ <h3><span class="i b">B</span>KOC กับ KOL ต่างกันยังไง</h3>
+ <div class="vs">
+  <div class="card"><span class="pill or">KOC</span><h4 style="margin-top:8px">Key Opinion Consumer (ผู้บริโภคที่คนอื่นฟังเสียง)</h4><p style="font-size:15px;color:var(--t2)">คนธรรมดาที่ใช้ของจริงแล้วมารีวิว คนตามไม่เยอะ แต่ดูจริงใจ น่าเชื่อเหมือนเพื่อนแนะนำ</p><ul class="clean" style="font-size:15px;margin-top:8px"><li>เหมาะกับ Seeding (ปล่อยรีวิวกระจายเยอะ ๆ ให้คนค้นเจอ)</li><li>มักเป็นงานแลกของ หรือค่าตัวน้อย</li><li>ใช้จำนวนคนเยอะช่วยกัน</li></ul></div>
+  <div class="mid">VS</div>
+  <div class="card"><span class="pill bl">KOL</span><h4 style="margin-top:8px">Key Opinion Leader (ผู้นำความคิด คนพูดแล้วคนฟัง)</h4><p style="font-size:15px;color:var(--t2)">คนที่มีชื่อเสียง หรือเชี่ยวชาญเรื่องนั้น ๆ คนตามเยอะ พูดอะไรมีน้ำหนัก</p><ul class="clean" style="font-size:15px;margin-top:8px"><li>เหมาะกับสร้างการรับรู้ หรือสร้างความน่าเชื่อถือ</li><li>มีค่าตัว มีเงื่อนไขในสัญญา</li><li>คนเดียวก็ไปได้ไกล</li></ul></div>
+ </div>
+ <div class="note cream"><span class="ic">🎯</span><div>แคมเปญส่วนใหญ่ผสมกัน เช่น KOL ไม่กี่คนเปิดกระแส แล้วตามด้วย KOC หรือ Nano จำนวนเยอะให้รีวิวกระจายทั่ว คนที่ค้นหาข้อมูลจะเจอรีวิวเยอะ</div></div>
+
+ <h3><span class="i y">C</span>ศัพท์ที่ต้องรู้ (พิมพ์ค้นหาได้)</h3>
+ <input class="search" id="gq" placeholder="พิมพ์หาคำ เช่น brief, CPM, ค่าตัว">
+ <div class="gloss" id="gloss">
+  <div class="term"><div class="en">Brief</div><div class="th">บรีฟ (ใบสั่งงาน)</div><p>เอกสารบอกอินฟลูว่าต้องทำอะไร สินค้าคืออะไร ต้องพูดจุดไหน ห้ามพูดอะไร โพสต์วันไหน แฮชแท็กอะไร</p><div class="eg">หัวใจของงาน ทุกครั้งที่ตรวจงานจะเทียบกับบรีฟนี้</div></div>
+  <div class="term"><div class="en">Deliverables</div><div class="th">ชิ้นงานที่ต้องส่ง</div><p>รายการชิ้นงานที่อินฟลูต้องทำให้ครบ เช่น วิดีโอ TikTok 1 คลิป และ IG Story 3 เฟรม</p><div class="eg">ต้องเขียนให้ชัดตั้งแต่ตอนตกลงราคา</div></div>
+  <div class="term"><div class="en">Script</div><div class="th">สคริปต์ (บทพูดหรือโครงคลิป)</div><p>โครงเรื่องหรือบทพูดที่อินฟลูเขียนก่อนถ่าย ส่งให้ตรวจก่อน จะได้ไม่ต้องถ่ายใหม่ทั้งคลิป</p></div>
+  <div class="term"><div class="en">Draft</div><div class="th">ดราฟต์ (คลิปฉบับร่าง)</div><p>คลิปที่ถ่ายและตัดเสร็จแล้วแต่ยังไม่โพสต์ ส่งมาให้ตรวจก่อนขึ้นจริง</p></div>
+  <div class="term"><div class="en">Revision Rounds</div><div class="th">จำนวนรอบแก้งาน</div><p>แก้งานได้กี่รอบในราคานี้ เช่น แก้สคริปต์ 1 รอบ แก้คลิป 1 รอบ เกินจากนี้อาจมีค่าใช้จ่ายเพิ่ม</p><div class="eg">ต้องตกลงก่อน ไม่งั้นแก้ไม่จบ</div></div>
+  <div class="term"><div class="en">Talent Fee / Rate</div><div class="th">ค่าตัวอินฟลู</div><p>เงินที่จ่ายให้อินฟลูต่อชิ้นงานหรือต่อแพ็กเกจ แต่ละคนมีเรตไม่เท่ากัน</p></div>
+  <div class="term"><div class="en">Rate Card</div><div class="th">ใบเรตราคา</div><p>ใบราคาของอินฟลูแต่ละคน เช่น คลิปละเท่าไหร่ สตอรี่ละเท่าไหร่ ซื้อเป็นแพ็กเกจลดเท่าไหร่</p></div>
+  <div class="term"><div class="en">Barter</div><div class="th">แลกสินค้าหรือบริการ (แทนค่าตัว)</div><p>อินฟลูได้สินค้าหรือบริการแทนเงิน เช่น ได้ทานฟรี ได้ทำทรีตเมนต์ฟรี แล้วมารีวิว</p></div>
+  <div class="term"><div class="en">Seeding</div><div class="th">หว่านรีวิว (ปล่อยรีวิวกระจาย)</div><p>ส่งสินค้าหรือให้คนจำนวนมากมารีวิว เพื่อให้มีรีวิวกระจายทั่วโซเชียล คนค้นแล้วเจอเยอะ</p></div>
+  <div class="term"><div class="en">Mark-up</div><div class="th">ส่วนบวกเพิ่ม (กำไรที่บวกจากค่าตัวจริง)</div><p>ส่วนที่คนกลางบวกเพิ่มจากค่าตัวจริง เป็นกำไรหรือค่าบริการของคนกลาง</p><div class="eg">เกี่ยวกับรูปแบบที่ 3 ในพาร์ต 02</div></div>
+  <div class="term"><div class="en">Coordination Fee</div><div class="th">ค่าประสานงาน</div><p>ค่าบริการของคนกลางที่ดูแลอินฟลูให้ทั้งหมด แยกจากค่าตัวอินฟลู</p></div>
+  <div class="term"><div class="en">Usage Rights</div><div class="th">สิทธิ์นำคลิปไปใช้ต่อ</div><p>แบรนด์ขอเอาคลิปของอินฟลูไปใช้ที่อื่น เช่น เว็บไซต์ หน้าร้าน ทำโฆษณา ได้กี่เดือน มักมีค่าใช้จ่ายเพิ่ม</p></div>
+  <div class="term"><div class="en">Whitelisting / Boost</div><div class="th">ยิงแอดผ่านบัญชีอินฟลู</div><p>แบรนด์เอาโพสต์ของอินฟลูไปยิงโฆษณาต่อในนามบัญชีอินฟลู เช่น Spark Ads (ยิงแอดจากโพสต์จริง) ใน TikTok ต้องได้รับอนุญาต และมักคิดเงินเพิ่ม</p></div>
+  <div class="term"><div class="en">Exclusivity</div><div class="th">ห้ามรับงานคู่แข่ง</div><p>เงื่อนไขว่าอินฟลูห้ามรับงานแบรนด์คู่แข่งในช่วงเวลาหนึ่ง เช่น 1 เดือน ยิ่งนานยิ่งแพง</p></div>
+  <div class="term"><div class="en">Disclosure / #ad</div><div class="th">บอกให้รู้ว่าเป็นงานโฆษณา</div><p>ติดป้ายว่าโพสต์นี้ได้รับการสนับสนุน เช่น #ad #sponsored หรือใช้ปุ่ม Paid Partnership (ป้ายงานร่วมกับแบรนด์) ของแพลตฟอร์ม</p></div>
+  <div class="term"><div class="en">Reach</div><div class="th">จำนวนคนที่เห็น (ไม่นับซ้ำ)</div><p>มีกี่คนที่เห็นโพสต์ คนเดียวเห็น 3 รอบก็นับ 1</p></div>
+  <div class="term"><div class="en">Impressions</div><div class="th">จำนวนครั้งที่ถูกเห็น (นับซ้ำ)</div><p>โพสต์ถูกแสดงกี่ครั้ง คนเดียวเห็น 3 รอบนับ 3 ตัวเลขนี้เลยมักสูงกว่า Reach</p></div>
+  <div class="term"><div class="en">Views</div><div class="th">ยอดวิว (จำนวนครั้งที่เปิดดูคลิป)</div><p>จำนวนครั้งที่คลิปถูกเปิดดู แต่ละแพลตฟอร์มนับไม่เหมือนกัน</p></div>
+  <div class="term"><div class="en">Engagement</div><div class="th">การมีส่วนร่วม (ไลก์ คอมเมนต์ แชร์ เซฟ)</div><p>สิ่งที่คนดูทำกับโพสต์ เช่น กดไลก์ คอมเมนต์ แชร์ เซฟ</p></div>
+  <div class="term"><div class="en">Engagement Rate (ER)</div><div class="th">อัตราการมีส่วนร่วม (คนกดไลก์/คอมเมนต์/แชร์ เทียบกับคนดู)</div><p>Engagement ÷ Views (หรือ Reach หรือผู้ติดตาม) × 100 บอกว่าคนดูอินจริงไหม ใช้จับอินฟลูที่ยอดตามเยอะแต่ไม่มีคนสนใจ</p><div class="eg">ตกลงกับทีมว่าจะหารด้วยอะไร แล้วใช้แบบเดียวทั้งแคมเปญ</div></div>
+  <div class="term"><div class="en">CPM</div><div class="th">ต้นทุนต่อการเห็น 1,000 ครั้ง</div><p>ค่าใช้จ่าย ÷ Impressions × 1,000 ใช้เทียบความคุ้มค่าระหว่างอินฟลูแต่ละคน</p></div>
+  <div class="term"><div class="en">CPE</div><div class="th">ต้นทุนต่อการมีส่วนร่วม 1 ครั้ง</div><p>ค่าใช้จ่าย ÷ จำนวน Engagement ยิ่งต่ำยิ่งคุ้ม</p></div>
+  <div class="term"><div class="en">CPV</div><div class="th">ต้นทุนต่อวิว</div><p>ค่าใช้จ่าย ÷ ยอดวิว นิยมใช้กับงานวิดีโอ</p></div>
+  <div class="term"><div class="en">Insights / Stats</div><div class="th">หน้าสถิติหลังบ้าน</div><p>หน้าที่อินฟลูเปิดดูยอด Reach Views Engagement ได้ ต้องขอให้อินฟลูแคปหน้าจอส่งมาหลังโพสต์</p></div>
+  <div class="term"><div class="en">Niche</div><div class="th">สายคอนเทนต์ (หมวดที่ทำ)</div><p>หมวดที่อินฟลูทำ เช่น บิวตี้ อาหาร แม่และเด็ก สุขภาพ ไลฟ์สไตล์ ต้องตรงกับสินค้า</p></div>
+  <div class="term"><div class="en">Shortlist</div><div class="th">รายชื่อเสนอให้คัด</div><p>รายชื่ออินฟลูที่คนกลางหามาเสนอ พร้อมยอดตามและราคา ให้ทีมเลือก</p></div>
+  <div class="term"><div class="en">Go-live / Posting Date</div><div class="th">วันโพสต์ขึ้นจริง</div><p>วันและเวลาที่ต้องโพสต์ บางแคมเปญต้องโพสต์พร้อมกันทั้งหมด</p></div>
+  <div class="term"><div class="en">Fake Followers</div><div class="th">ผู้ติดตามปลอม</div><p>ยอดตามที่ซื้อมา สังเกตจากยอดตามเยอะแต่ไลก์ คอมเมนต์ และวิวน้อยผิดปกติ หรือคอมเมนต์ดูเป็นบอต</p></div>
+ </div>
+
+ <h3><span class="i k">D</span>เตรียมตัว: แมปเพื่อนอินฟลูของแก้มเข้า Tier</h3>
+ <p>นี่คือการบ้านที่สำคัญที่สุด ถ้าแก้มเข้าไปคุยแล้วบอกได้ว่า "หนูรู้จักใครบ้าง อยู่ Tier ไหน สายอะไร สนิทแค่ไหน" ทีมจะเห็นทันทีว่าแก้มมีเครือข่ายจริง และเข้าใจเรื่อง Tier แล้ว ตารางนี้กรอกได้ในหน้านี้เลย ข้อมูลจะถูกจำไว้ในเครื่องที่แก้มใช้เปิดเท่านั้น ไม่ถูกส่งไปที่ไหน</p>
+ <div class="g3 grid" style="margin:14px 0">
+  <div class="card" style="padding:16px"><h4>ระดับความสนิท</h4><p style="font-size:14.5px;color:var(--t2)"><span class="pill gr">A</span> สนิทมาก ทักไลน์ได้เลย<br><span class="pill yl">B</span> รู้จัก เคยคุยหรือเคยทำงานด้วย<br><span class="pill re">C</span> รู้จักผ่านคนอื่น ต้องให้คนแนะนำ</p></div>
+  <div class="card" style="padding:16px"><h4>ดูอะไรเพิ่มนิดหน่อย</h4><p style="font-size:14.5px;color:var(--t2)">ยอดวิวเฉลี่ยของคลิปช่วงหลัง ๆ คอมเมนต์เป็นคนจริงไหม คนดูส่วนใหญ่เป็นใคร (เพศ อายุ จังหวัด) ถ้าถามได้</p></div>
+  <div class="card" style="padding:16px"><h4>เป้าหมาย</h4><p style="font-size:14.5px;color:var(--t2)">มีสัก 10–15 รายชื่อ ไม่ต้องครบทุก Tier ขอให้ข้อมูลจริง และรู้ว่าใครติดต่อได้จริง</p></div>
+ </div>
+ <div class="tw edit"><table id="netmap">
+  <thead><tr><th>#</th><th>Tier</th><th>ชื่อ / @handle</th><th>แพลตฟอร์ม</th><th>ผู้ติดตาม</th><th>สายคอนเทนต์</th><th>ความสนิท A/B/C</th><th>เคยรับงานแบรนด์อะไร</th><th>รับ Barter ไหม</th></tr></thead>
+  <tbody></tbody>
+ </table></div>
+ <div class="tools"><button class="btn" id="addrow">+ เพิ่มแถว</button><button class="btn" id="copymap">คัดลอกตาราง (วางใน Excel ได้)</button><button class="btn" onclick="window.print()">พิมพ์ / เซฟเป็น PDF</button><button class="btn" id="clrmap">ล้างตาราง</button></div>
+ <p class="muted" style="margin-top:8px">ตัวหนังสือจาง ๆ ในตารางเป็นแค่ตัวอย่าง พิมพ์ทับได้เลย ในช่อง Tier ให้พิมพ์ KOC, Nano, Micro, Mid, Macro หรือ Mega ตารางสรุปด้านล่างจะนับให้เอง</p>
+
+ <h4 style="margin-top:24px">สรุปเป็นภาพเดียว (เอาไว้โชว์ทีม)</h4>
+ <div class="tw"><table>
+  <thead><tr><th>Tier</th><th>มีกี่คน</th><th>สายไหนบ้าง</th><th>สนิทระดับ A กี่คน</th><th>เหมาะกับงานแบบไหน</th></tr></thead>
+  <tbody id="tsum"></tbody>
+ </table></div>
+
+ <h3><span class="i">E</span>ตัวอย่างการเล่าให้ทีมฟัง (Mini Presentation 5 นาที)</h3>
+ <div class="outline">
+  <div class="ol"><div class="tm">0:00–0:30</div><p>แนะนำตัวสั้น ๆ: ทำ Marketing ฝั่งแบรนด์ ดูคอนเทนต์ Production ถ่ายภาพ ตัดต่อเป็น และสนใจลองทำ Influencer Marketing จริงจัง</p></div>
+  <div class="ol"><div class="tm">0:30–1:30</div><p>โชว์ตารางสรุป Tier: "หนูรู้จักอินฟลูประมาณ X คน ส่วนใหญ่เป็น Nano กับ Micro สาย ___ มี Mid-tier อยู่ X คนที่สนิทพอจะทักได้เลย"</p></div>
+  <div class="ol"><div class="tm">1:30–2:30</div><p>บอกว่าเข้าใจความต่าง: "ถ้าแคมเปญอยากได้รีวิวเยอะ ๆ จะใช้กลุ่ม Nano กับ KOC ถ้าอยากให้คนเห็นกว้าง ต้องมี Micro ขึ้นไปผสม"</p></div>
+  <div class="ol"><div class="tm">2:30–3:30</div><p>เล่าประสบการณ์ที่เคยดีลเพื่อนให้แบรนด์ (ใช้ Framework ในพาร์ต 04)</p></div>
+  <div class="ol"><div class="tm">3:30–4:30</div><p>บอกจุดที่ช่วยทีมได้: เช็กสคริปต์และคลิปก่อนส่งให้ทีม เพราะดูออกว่าตรงบรีฟไหม ภาพเสียงโอเคไหม ตัดต่อจังหวะดีไหม</p></div>
+  <div class="ol"><div class="tm">4:30–5:00</div><p>เสนอวิธีเริ่ม: "ขอเริ่มจากงานเล็กก่อน ใช้เพื่อนในเครือข่ายที่ติดต่อได้จริง ส่งงานให้ครบ แล้วค่อยขยาย"</p></div>
+ </div>
+</div></section>
+<section class="sec" id="s2"><div class="wrap">
+ <span class="kick"><b class="or">PART 02</b>Scopes · Process · Pricing</span>
+ <h2><span class="n">02</span>Scope งาน (ขอบเขตงาน) ที่ทีมเคยทำ และแก้มควรเริ่มตรงไหน</h2>
+ <p class="sub">ทีมจะไม่คุยกับอินฟลูเอง Coordinator (ผู้ประสานงาน คนกลางที่ดูแลอินฟลู) จะเป็นคนดูแลอินฟลูทุกคนตั้งแต่ต้นจนจบ ส่วนการจ้างมี 3 รูปแบบ ต่างกันที่ใครจ่ายค่าตัว และคนกลางได้เงินจากอะไร</p>
+
+ <h3><span class="i">A</span>ขั้นตอนการทำงาน (ใช้กับทุกรูปแบบ)</h3>
+ <div class="flow">
+  <div class="fs"><div class="no">1</div><h4>หาและต่อรอง</h4><p>หาอินฟลูตามเกณฑ์ ต่อรองราคา แล้วส่งรายชื่อพร้อมราคาให้ทีมคัด</p><div class="who"><span class="pill or">แก้ม</span><span class="pill bl">ทีมเลือก</span></div></div>
+  <div class="fs"><div class="no">2</div><h4>ส่งบรีฟ</h4><p>ส่ง Brief ให้คนที่ผ่านการคัด เช็กว่าเข้าใจตรงกัน</p><div class="who"><span class="pill or">แก้ม</span></div></div>
+  <div class="fs"><div class="no">3</div><h4>สคริปต์</h4><p>อินฟลูเขียนสคริปต์ แก้มเช็กก่อน แล้วส่งให้ทีมอนุมัติ</p><div class="who"><span class="pill or">แก้มเช็ก</span><span class="pill bl">ทีมอนุมัติ</span></div></div>
+  <div class="fs"><div class="no">4</div><h4>ถ่าย + Draft</h4><p>อินฟลูถ่ายงาน แก้มเช็ก Draft ก่อน ส่งให้ทีมรีวิว แล้วตามแก้จนจบ</p><div class="who"><span class="pill or">แก้มเช็ก</span><span class="pill bl">ทีมรีวิว</span></div></div>
+  <div class="fs"><div class="no">5</div><h4>โพสต์ + ยอด</h4><p>ตามให้โพสต์ตรงวัน ส่งลิงก์โพสต์และแคปหน้าจอยอดให้ทีม</p><div class="who"><span class="pill or">แก้ม</span></div></div>
+  <div class="fs"><div class="no">6</div><h4>เรื่องเงิน</h4><p>ถ้าทีมจ่ายค่าตัวเอง ส่ง Excel ชื่อ ค่าตัว เลขบัญชี ให้ทีมโอน</p><div class="who"><span class="pill or">แก้ม</span><span class="pill bl">ทีมโอน</span></div></div>
+ </div>
+ <div class="note tip"><span class="ic">🎬</span><div>ขั้นที่ 3 กับ 4 คือจุดที่แก้มเก่งอยู่แล้ว แก้มดูออกว่าสคริปต์ตรงบรีฟไหม ภาพ เสียง แสง โอเคไหม ตัดต่อจังหวะดีไหม พูดถึงสินค้าครบไหม ถ้าแก้มกรองให้ก่อนได้ ทีมจะเหนื่อยน้อยลงมาก นี่คือจุดขายของแก้ม</div></div>
+
+ <h3><span class="i b">B</span>3 รูปแบบการจ้าง</h3>
+
+ <div class="model m1">
+  <div class="mh"><div class="big">1</div><div><h4>Barter + ค่าหารายหัว</h4><p>อินฟลูได้สินค้าหรือบริการแทนค่าตัว คนกลางได้ค่าหาเป็นรายหัว</p></div></div>
+  <div class="mb">
+   <div class="box"><h5>📚 ต้องรู้อะไร</h5><ul><li>อินฟลูไม่ได้เงิน เลยต้องเลือกคนที่อยากได้ของหรือบริการนั้นจริง</li><li>ต้องตกลงเกณฑ์ขั้นต่ำให้ชัดก่อนเริ่ม เช่น ช่วงยอดผู้ติดตาม สายคอนเทนต์ พื้นที่</li><li>ทีมมีสิทธิ์ปฏิเสธรายชื่อที่ไม่ตรงเกณฑ์ และควรตกลงว่าคนที่ถูกปฏิเสธไม่นับเป็นหัวที่คิดเงิน</li><li>บอกให้ชัดว่าอินฟลูต้องส่งงานอะไรแลกกับของที่ได้</li></ul></div>
+   <div class="box"><h5>🪜 ขั้นตอน</h5><ol><li>ตกลงเกณฑ์ จำนวนหัว และค่าหาต่อหัว</li><li>หารายชื่อตามเกณฑ์ ส่งให้ทีมคัด</li><li>นัดวันรับสินค้าหรือใช้บริการ</li><li>เช็กสคริปต์และ Draft ส่งทีม</li><li>ตามโพสต์ ส่งลิงก์และยอด</li></ol></div>
+   <div class="box ex full"><h5>🧪 ตัวอย่างง่าย ๆ (สมมติ)</h5><p>คลินิกความงามอยากได้รีวิว 10 คน ให้ทำทรีตเมนต์ฟรีแลกคลิปรีวิว 1 คลิป เกณฑ์คือ IG หรือ TikTok 5K ขึ้นไป สายบิวตี้ อยู่กรุงเทพฯ แก้มส่งรายชื่อ 14 คน ทีมคัดเหลือ 10 แก้มได้ค่าหา X,XXX บาท × 10 หัว</p></div>
+   <div class="box"><h5>👍 ข้อดี</h5><ul><li>เริ่มง่าย ใช้เพื่อนในเครือข่ายได้เลย</li><li>ไม่ต้องจับเงินค่าตัว ความเสี่ยงต่ำ</li></ul></div>
+   <div class="box"><h5>⚠️ ความเสี่ยง</h5><ul><li>ทีมเคยเจอมาแล้ว: ได้คนที่มีผู้ติดตามแค่ประมาณ 300 คน เพราะไม่ได้ตั้งเกณฑ์ให้ชัด</li><li>อินฟลูที่ไม่ได้เงินอาจส่งงานช้าหรือหายไป ต้องตามเก่ง</li></ul></div>
+  </div>
+ </div>
+
+ <div class="model m2">
+  <div class="mh"><div class="big">2</div><div><h4>เหมาค่าประสานงาน ทีมจ่ายค่าตัวเอง</h4><p>คนกลางได้ค่าประสานงานแบบเหมา ทีมโอนค่าตัวให้อินฟลูโดยตรง โปร่งใสทุกบาท</p></div></div>
+  <div class="mb">
+   <div class="box"><h5>📚 ต้องรู้อะไร</h5><ul><li>ต้องหารายชื่อมาเผื่อเยอะกว่าที่ใช้จริง เช่น ใช้ 20 คน หามาประมาณ 50 คน แล้วทีมคัด</li><li>แก้มต่อรองค่าตัวทั้งหมดให้ทีม ต่อได้ดี ทีมยิ่งเชื่อใจ</li><li>ต้องตกลงก่อน: จำนวนรายชื่อที่ต้องหา จำนวนรอบแก้ สัดส่วน Tier เช่น 10K+ กี่คน 100K+ กี่คน</li><li>ข้อมูลบัญชีต้องถูกต้อง เพราะทีมโอนตามไฟล์ของแก้ม</li></ul></div>
+   <div class="box"><h5>🪜 ขั้นตอน</h5><ol><li>ตกลงจำนวนหัว สัดส่วน Tier รอบแก้ และค่าประสานงาน</li><li>หารายชื่อเผื่อ ต่อราคา ส่ง Shortlist (รายชื่อเสนอให้คัด)</li><li>ทีมคัด แก้มส่งบรีฟ</li><li>เช็กสคริปต์และ Draft ตามแก้</li><li>ตามโพสต์ ส่งลิงก์และยอด</li><li>ส่ง Excel ชื่อ ค่าตัว เลขบัญชี ให้ทีมโอน</li></ol></div>
+   <div class="box ex full"><h5>🧪 ตัวอย่างง่าย ๆ (สมมติ)</h5><p>แบรนด์ขนมอยากได้ 20 คน แบ่งเป็น 10K+ 15 คน และ 100K+ 5 คน แก้มหามา 50 ชื่อพร้อมราคา ทีมคัดเหลือ 20 แก้มดูแลจนโพสต์ครบ ส่งไฟล์ Excel ให้ทีมโอนค่าตัวเอง แก้มได้ค่าประสานงานเหมา XX,XXX บาท</p></div>
+   <div class="box"><h5>👍 ข้อดี</h5><ul><li>ไม่ต้องสำรองเงินค่าตัว</li><li>รายได้แก้มชัดเจน ไม่ขึ้นกับว่าต่อค่าตัวได้เท่าไหร่</li><li>ได้เรียนรู้เรตจริงของอินฟลูแต่ละ Tier</li></ul></div>
+   <div class="box"><h5>⚠️ ความเสี่ยง</h5><ul><li>การหารายชื่อเผื่อเป็นต้นทุนเวลาของแก้มเอง ถ้าไม่ตกลงจำนวนก่อน อาจหาไม่จบ</li><li>อินฟลูเยอะ งานตามเยอะ ต้องมีตารางติดตามดี ๆ</li></ul></div>
+  </div>
+ </div>
+
+ <div class="model m3">
+  <div class="mh"><div class="big">3</div><div><h4>เหมางบรวมค่าตัว (ไม่เปิดราคาค่าตัว)</h4><p>ทีมให้งบก้อนเดียวพร้อมจำนวนคน คนกลางบริหารค่าตัวเอง ส่วนต่างเป็นกำไรของคนกลาง</p></div></div>
+  <div class="mb">
+   <div class="box"><h5>📚 ต้องรู้อะไร</h5><ul><li>ต้องรู้เรตตลาดดีมาก ถึงจะประเมินได้ว่างบนี้ได้กี่คน Tier ไหน</li><li>รับงานแล้วต้องส่งให้ครบจำนวน ถ้าอินฟลูหาย ต้องหาคนแทนเอง</li><li>ต้องเผื่อเงินไว้กรณีค่าตัวขึ้น หรือต้องจ่ายคนแทน</li><li>บางทีต้องสำรองจ่ายค่าตัวก่อน เช็กเงื่อนไขการรับเงินจากทีมให้ดี</li></ul></div>
+   <div class="box"><h5>🪜 ขั้นตอน</h5><ol><li>รับงบและจำนวนคนจากทีม</li><li>ประเมินว่าทำได้ไหม ได้ Tier ไหน แล้วตอบทีม</li><li>หาและต่อรองเอง ส่งรายชื่อให้ทีมเลือก</li><li>บรีฟ เช็กสคริปต์และ Draft ตามแก้</li><li>ตามโพสต์ ส่งลิงก์และยอด</li><li>จ่ายค่าตัวอินฟลูเอง</li></ol></div>
+   <div class="box ex full"><h5>🧪 ตัวอย่างง่าย ๆ (สมมติ)</h5><p>ทีมมีงบรวม XXX,XXX บาท อยากได้ 15 คน แก้มประเมินว่างบนี้ได้ Micro 12 คน และ Mid-tier 3 คน ถ้าค่าตัวรวมจริงต่ำกว่างบ ส่วนที่เหลือคือรายได้ของแก้ม ถ้าค่าตัวเกินงบ แก้มต้องรับส่วนต่างเอง</p></div>
+   <div class="box"><h5>👍 ข้อดี</h5><ul><li>ถ้ารู้ตลาดดี ได้กำไรมากที่สุด</li><li>ทีมสบาย จ่ายก้อนเดียวจบ</li></ul></div>
+   <div class="box"><h5>⚠️ ความเสี่ยง</h5><ul><li>ประเมินผิดแล้วขาดทุนได้</li><li>ความรับผิดชอบสูงสุด ต้องส่งครบทุกกรณี</li><li>ไม่เหมาะกับคนที่ยังไม่รู้เรตตลาด</li></ul></div>
+  </div>
+ </div>
+
+ <div class="tw" style="margin-top:6px"><table>
+  <thead><tr><th>เทียบกัน</th><th>1 Barter + รายหัว</th><th>2 เหมาค่าประสานงาน</th><th>3 เหมางบรวม</th></tr></thead>
+  <tbody>
+   <tr><td>ใครจ่ายอินฟลู</td><td>ไม่มีค่าตัว ได้ของแทน</td><td>ทีมโอนตรง</td><td>คนกลางจ่ายเอง</td></tr>
+   <tr><td>คนกลางได้อะไร</td><td>ค่าหา × จำนวนหัว</td><td>ค่าประสานงานก้อนเดียว</td><td>งบ − ค่าตัวจริง − เงินเผื่อ</td></tr>
+   <tr><td>ความเสี่ยงของคนกลาง</td><td><span class="pill gr">ต่ำ</span></td><td><span class="pill yl">กลาง</span></td><td><span class="pill re">สูง</span></td></tr>
+   <tr><td>ต้องรู้เรตตลาดแค่ไหน</td><td>นิดหน่อย</td><td>พอสมควร</td><td>ต้องแม่น</td></tr>
+   <tr><td>เหมาะกับแก้มตอนนี้</td><td>✅ ใช่ ถ้าขอบเขตเล็ก เกณฑ์ชัด</td><td>✅ ใช่ ถ้าเริ่มจำนวนน้อย</td><td>⏳ ไว้ทีหลัง</td></tr>
+  </tbody>
+ </table></div>
+
+ <h3><span class="i y">C</span>คำแนะนำ: แก้มควรเริ่มที่ไหน</h3>
+ <div class="reco">
+  <div class="pop yellow"></div>
+  <p style="position:relative;z-index:2;max-width:760px">แนะนำให้เริ่มจาก <b>รูปแบบที่ 2 แบบจำนวนน้อย</b> หรือ <b>Barter ที่ขอบเขตจำกัด</b> โดยใช้อินฟลูในเครือข่ายของแก้มเอง เช่น เริ่มจากเพื่อนอินฟลู 4–5 คนที่ตัวใหญ่หน่อย สนิท และติดต่อได้จริง แล้วโชว์จุดแข็งเรื่องการเช็กคอนเทนต์ ไม่ต้องรับงานใหญ่ตั้งแต่แรก เพราะการหารายชื่อเผื่อเยอะ ๆ เป็นต้นทุนเวลาของแก้มเอง ทำสิ่งที่ถนัดก่อนคุ้มกว่า</p>
+  <div class="path">
+   <div class="pp"><div class="ph">Step 1 · ตอนนี้</div><h4>งานเล็ก เครือข่ายตัวเอง</h4><p style="font-size:14.5px;color:var(--t2)">รูปแบบที่ 2 จำนวนน้อย หรือ Barter ที่มีเกณฑ์ชัด ใช้เพื่อนสนิทระดับ A เน้นส่งงานครบ ตรงเวลา ผ่านบรีฟ</p></div>
+   <div class="pp"><div class="ph">Step 2 · หลังทำไป 2–3 งาน</div><h4>ขยายจำนวนและ Tier</h4><p style="font-size:14.5px;color:var(--t2)">รับจำนวนมากขึ้น เริ่มหาคนนอกเครือข่าย เก็บเรตค่าตัวจริงไว้เป็นฐานข้อมูลของตัวเอง</p></div>
+   <div class="pp"><div class="ph">Step 3 · เมื่อรู้ต้นทุนแล้ว</div><h4>รับเหมางบรวม</h4><p style="font-size:14.5px;color:var(--t2)">พอรู้เรตแต่ละ Tier แม่นแล้ว ค่อยรับรูปแบบที่ 3 ที่ได้กำไรมากกว่า แต่เสี่ยงกว่า</p></div>
+  </div>
+ </div>
+
+ <h3><span class="i k">D</span>วิธีคิดค่าบริการเบื้องต้น</h3>
+ <p>ตัวเลขด้านล่างเป็นช่องว่าง (X,XXX) ให้แก้มใส่เองหลังคุยกับทีม ไกด์นี้ไม่ได้กำหนดราคาให้ เพราะราคาจริงขึ้นกับขนาดงาน จำนวนคน และความยากของแต่ละแคมเปญ</p>
+ <div class="grid g3" style="margin-top:12px">
+  <div class="card"><span class="pill yl">รูปแบบที่ 1</span><h4 style="margin-top:8px">ค่าหารายหัว</h4><div class="money"><span class="blk">ค่าหา X,XXX</span><span class="op">×</span><span class="blk">จำนวนหัวที่ผ่านคัด</span></div><p class="muted" style="margin-top:8px">นับเฉพาะคนที่ทีมรับและโพสต์จริง ตกลงให้ชัดว่าคนที่หายกลางทางนับไหม</p></div>
+  <div class="card"><span class="pill bl">รูปแบบที่ 2</span><h4 style="margin-top:8px">ค่าประสานงานเหมา</h4><div class="money"><span class="blk">ชั่วโมงที่ใช้ทั้งหมด</span><span class="op">×</span><span class="blk">ค่าเวลาของแก้ม</span><span class="op">+</span><span class="blk">เผื่อ</span></div><p class="muted" style="margin-top:8px">หรือคิดเป็นต่อหัวแล้วรวมเป็นก้อน เช่น X,XXX × 20 คน = ค่าประสานงาน</p></div>
+  <div class="card"><span class="pill or">รูปแบบที่ 3</span><h4 style="margin-top:8px">งบรวม + ส่วนต่าง</h4><div class="money"><span class="blk">งบจากทีม</span><span class="op">−</span><span class="blk">ค่าตัวจริงรวม</span><span class="op">−</span><span class="blk">เงินเผื่อ</span><span class="op">=</span><span class="blk">กำไร</span></div><p class="muted" style="margin-top:8px">ควรกันเงินเผื่อไว้ส่วนหนึ่ง สำหรับคนหายหรือค่าตัวขึ้น สัดส่วนเท่าไหร่ให้คุยกับทีม</p></div>
+ </div>
+ <h4 style="margin-top:22px">ก่อนตั้งราคา ให้นับต้นทุนเวลาพวกนี้</h4>
+ <div class="tw"><table>
+  <thead><tr><th>งาน</th><th>ทำไมกินเวลา</th><th>คิดคร่าว ๆ</th></tr></thead>
+  <tbody>
+   <tr><td>หารายชื่อ (Sourcing: การหาคน)</td><td>ต้องหาเผื่อ เช็กยอด เช็กคนดู ทักไปถาม</td><td>เวลาต่อรายชื่อ × จำนวนรายชื่อที่ต้องหา</td></tr>
+   <tr><td>ต่อรองราคา</td><td>คุยไปกลับหลายรอบ</td><td>เวลาต่อคน × จำนวนคน</td></tr>
+   <tr><td>ส่งบรีฟ และตอบคำถาม</td><td>อินฟลูถามซ้ำ ต้องอธิบาย</td><td>เวลาต่อคน</td></tr>
+   <tr><td>เช็กสคริปต์และ Draft</td><td>ดูทุกชิ้น ส่งทีม ตามแก้</td><td>เวลาต่อชิ้น × จำนวนรอบแก้</td></tr>
+   <tr><td>ตามงาน ตามโพสต์</td><td>คนลืม เลื่อน หาย</td><td>เผื่อไว้ต่อคน</td></tr>
+   <tr><td>ทำ Report (รายงานสรุปผล)</td><td>เก็บลิงก์ แคปยอด สรุปตาราง</td><td>เวลาต่อแคมเปญ</td></tr>
+  </tbody>
+ </table></div>
+ <h4 style="margin-top:22px">เช็กลิสต์ 6 ข้อ ที่ต้องตกลงกับทีมก่อนเริ่มทุกงาน</h4>
+ <ul class="check card" style="padding:18px">
+  <li><label><input type="checkbox">จำนวนรายชื่อที่ต้องหามาให้คัด (เช่น ใช้ 20 หา 50)</label></li>
+  <li><label><input type="checkbox">จำนวนรอบแก้ที่รวมในราคา (สคริปต์กี่รอบ คลิปกี่รอบ)</label></li>
+  <li><label><input type="checkbox">สัดส่วน Tier (10K+ กี่คน 100K+ กี่คน)</label></li>
+  <li><label><input type="checkbox">เกณฑ์ขั้นต่ำ (ยอดตาม สายคอนเทนต์ พื้นที่) และสิทธิ์ปฏิเสธของทีม</label></li>
+  <li><label><input type="checkbox">Deliverables, Usage Rights (สิทธิ์นำคลิปไปใช้ต่อ) และ Boost (ยิงแอดต่อ) หรือไม่</label></li>
+  <li><label><input type="checkbox">ค่าจ้าง วิธีจ่าย กำหนดส่งงาน และวันโพสต์</label></li>
+ </ul>
+</div></section>
+<section class="sec" id="s3"><div class="wrap">
+ <span class="kick"><b class="yl">PART 03</b>Sample Report · Framework</span>
+ <h2><span class="n">03</span>ตัวอย่าง Report (รายงานสรุปผล) หลังจบแคมเปญ</h2>
+ <p class="sub">พอจบงาน ทีมอยากเห็นว่าใครโพสต์แล้ว ลิงก์อยู่ไหน ยอดเป็นยังไง และครั้งหน้าควรปรับอะไร ด้านล่างเป็นตัวอย่างหน้าตา Report ตามขั้นตอนงานของทีม ชื่อและตัวเลขทั้งหมดเป็นข้อมูลสมมติ</p>
+
+ <div class="report">
+  <div class="stamp">EXAMPLE DATA · ข้อมูลสมมติ</div>
+  <h4 style="font-size:20px">Campaign Report: แบรนด์ตัวอย่าง · รีวิวเมนูใหม่</h4>
+  <p class="muted">รูปแบบที่ 2 (เหมาค่าประสานงาน) · 8 คน · TikTok และ IG · ช่วงโพสต์ 2 สัปดาห์</p>
+
+  <h4 style="margin-top:18px">1. ภาพรวม (Campaign Overview: สรุปแคมเปญ)</h4>
+  <div class="grid g2" style="margin-top:6px">
+   <div class="box">เป้าหมาย: ให้คนรู้จักเมนูใหม่ และมีรีวิวให้ค้นเจอ<br>กลุ่มเป้าหมาย: วัยทำงาน กรุงเทพฯ ชอบลองของกินใหม่<br>Deliverables: TikTok 1 คลิป + IG Story 1 เฟรม ต่อคน</div>
+   <div class="box">สัดส่วน Tier: Nano 4 · Micro 3 · Mid-tier 1<br>รายชื่อที่หามา: 20 คน · ทีมคัดเหลือ 8<br>รอบแก้: สคริปต์ 1 รอบ · คลิป 1 รอบ</div>
+  </div>
+
+  <h4 style="margin-top:18px">2. ตัวเลขรวม</h4>
+  <div class="kpis">
+   <div class="kpi"><div class="l">โพสต์ครบ</div><div class="v">8/8</div><div class="s">ตรงวัน 7 · เลื่อน 1</div></div>
+   <div class="kpi"><div class="l">Views รวม</div><div class="v">412K</div><div class="s">ยอดวิวรวมทุกคลิป</div></div>
+   <div class="kpi"><div class="l">Engagement รวม</div><div class="v">23.3K</div><div class="s">ไลก์ + คอมเมนต์ + แชร์ + เซฟ</div></div>
+   <div class="kpi"><div class="l">ER เฉลี่ย</div><div class="v">5.7%</div><div class="s">Engagement ÷ Views</div></div>
+  </div>
+
+  <h4 style="margin-top:18px">3. รายชื่ออินฟลูและสถานะ (Deliverables Tracking: ติดตามชิ้นงาน)</h4>
+  <div class="tw"><table>
+   <thead><tr><th>#</th><th>อินฟลู</th><th>Tier</th><th>แพลตฟอร์ม</th><th>สคริปต์</th><th>Draft</th><th>โพสต์</th><th>ลิงก์</th><th class="num">Views</th><th class="num">ER</th></tr></thead>
+   <tbody>
+    <tr><td>1</td><td>@example_food01</td><td>Mid-tier</td><td>TikTok</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">186,000</td><td class="num">4.1%</td></tr>
+    <tr><td>2</td><td>@example_eat02</td><td>Micro</td><td>TikTok</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill yl">แก้ 1 รอบ</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">72,000</td><td class="num">6.3%</td></tr>
+    <tr><td>3</td><td>@example_cafe03</td><td>Micro</td><td>IG Reels</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">54,000</td><td class="num">5.9%</td></tr>
+    <tr><td>4</td><td>@example_yum04</td><td>Micro</td><td>TikTok</td><td><span class="pill yl">แก้ 1 รอบ</span></td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">41,000</td><td class="num">7.2%</td></tr>
+    <tr><td>5</td><td>@example_bite05</td><td>Nano</td><td>TikTok</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">23,000</td><td class="num">8.4%</td></tr>
+    <tr><td>6</td><td>@example_snack06</td><td>Nano</td><td>IG Reels</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">15,000</td><td class="num">9.1%</td></tr>
+    <tr><td>7</td><td>@example_taste07</td><td>Nano</td><td>TikTok</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill yl">แก้ 1 รอบ</span></td><td><span class="pill yl">เลื่อน 2 วัน</span></td><td>[ลิงก์โพสต์]</td><td class="num">12,000</td><td class="num">6.8%</td></tr>
+    <tr><td>8</td><td>@example_mood08</td><td>Nano</td><td>TikTok</td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">ผ่าน</span></td><td><span class="pill gr">โพสต์แล้ว</span></td><td>[ลิงก์โพสต์]</td><td class="num">9,000</td><td class="num">10.2%</td></tr>
+   </tbody>
+  </table></div>
+
+  <div class="grid g2" style="margin-top:18px">
+   <div><h4>4. Views ต่อคน</h4>
+    <div class="bars">
+     <div class="r"><span>@example_food01</span><span class="t"><i style="width:100%"></i></span><span>186K</span></div>
+     <div class="r"><span>@example_eat02</span><span class="t"><i style="width:39%"></i></span><span>72K</span></div>
+     <div class="r"><span>@example_cafe03</span><span class="t"><i style="width:29%"></i></span><span>54K</span></div>
+     <div class="r"><span>@example_yum04</span><span class="t"><i style="width:22%"></i></span><span>41K</span></div>
+     <div class="r"><span>Nano 4 คนรวม</span><span class="t"><i style="width:32%"></i></span><span>59K</span></div>
+    </div>
+   </div>
+   <div><h4>5. ER ต่อ Tier</h4>
+    <div class="bars">
+     <div class="r"><span>Nano</span><span class="t"><i style="width:85%"></i></span><span>8.5%</span></div>
+     <div class="r"><span>Micro</span><span class="t"><i style="width:64%"></i></span><span>6.4%</span></div>
+     <div class="r"><span>Mid-tier</span><span class="t"><i style="width:41%"></i></span><span>4.1%</span></div>
+    </div>
+    <p class="muted" style="margin-top:8px">อ่านง่าย ๆ: Mid-tier ทำให้คนเห็นเยอะ ส่วน Nano คนดูอินกว่า เป็นภาพที่เจอบ่อย แต่ไม่ใช่ทุกครั้ง</p>
+   </div>
+  </div>
+
+  <h4 style="margin-top:18px">6. ภาพหน้าจอยอด (Insights Screenshots: แคปหน้าสถิติหลังบ้าน)</h4>
+  <div class="shots">
+   <div class="shot">แคปหน้า Insights<br>@example_food01</div>
+   <div class="shot">แคปหน้า Insights<br>@example_eat02</div>
+   <div class="shot">แคปหน้า Insights<br>@example_cafe03</div>
+   <div class="shot">+ อีก 5 ภาพ</div>
+  </div>
+
+  <h4 style="margin-top:18px">7. สิ่งที่ได้เรียนรู้ และครั้งหน้าทำอะไร (Learnings & Next Steps)</h4>
+  <div class="grid g2">
+   <div class="box"><h5>✅ ที่ดี</h5><ul><li>โพสต์ครบ 8/8 คลิปผ่านบรีฟทุกชิ้น</li><li>คลิปที่เปิดด้วยภาพอาหารชัด ๆ ใน 3 วินาทีแรก คนดูจบเยอะกว่า</li><li>Nano มีคอมเมนต์ถามพิกัดเยอะ</li></ul></div>
+   <div class="box"><h5>🔧 ครั้งหน้าปรับ</h5><ul><li>ใส่ในบรีฟให้ชัดว่าต้องพูดชื่อเมนูกับราคา (2 คลิปลืม ต้องแก้)</li><li>นัดวันโพสต์ล่วงหน้า 1 สัปดาห์ กันเลื่อน</li><li>ถ้าเป้าคือยอดเห็น เพิ่ม Micro อีก 2 คน</li></ul></div>
+  </div>
+ </div>
+
+ <h3><span class="i">F</span>Framework: ต้องเก็บอะไร ตอนไหน</h3>
+ <div class="timeline">
+  <div class="tl"><div class="w">ก่อนเริ่ม</div><h4>ตกลงงาน</h4><ul><li>เป้าหมาย งบ จำนวน Tier</li><li>เกณฑ์ขั้นต่ำ รอบแก้</li><li>วันโพสต์</li></ul></div>
+  <div class="tl"><div class="w">ตอนหาคน</div><h4>Shortlist</h4><ul><li>ชื่อ ลิงก์โปรไฟล์ แพลตฟอร์ม</li><li>ยอดตาม วิวเฉลี่ย สายคอนเทนต์</li><li>ราคาที่ต่อได้</li></ul></div>
+  <div class="tl"><div class="w">ตอนผลิตงาน</div><h4>Tracking (ติดตามสถานะ)</h4><ul><li>ส่งบรีฟวันไหน</li><li>สถานะสคริปต์และ Draft</li><li>แก้กี่รอบ แก้อะไร</li></ul></div>
+  <div class="tl"><div class="w">วันโพสต์</div><h4>Go-live (วันขึ้นจริง)</h4><ul><li>ลิงก์โพสต์ทุกชิ้น</li><li>แคปหน้าจอโพสต์ตอนขึ้น</li><li>ติด #ad หรือ Paid Partnership ถูกไหม</li></ul></div>
+  <div class="tl"><div class="w">หลังโพสต์ 3–7 วัน</div><h4>Results (ผลลัพธ์)</h4><ul><li>แคปหน้า Insights</li><li>Views Reach Engagement ER</li><li>คอมเมนต์เด่น ๆ และบทเรียน</li></ul></div>
+ </div>
+ <div class="note warn"><span class="ic">📸</span><div>ยอดในหน้า Insights หลังบ้านต้องขอจากอินฟลูเท่านั้น คนนอกมองไม่เห็น ให้บอกตั้งแต่ตอนส่งบรีฟเลยว่า "หลังโพสต์ X วัน รบกวนแคปหน้าสถิติส่งมาด้วยนะ" จะได้ไม่ต้องไล่ตามทีหลัง</div></div>
+</div></section>
+
+<section class="sec" id="s4"><div class="wrap">
+ <span class="kick"><b class="dk">PART 04</b>Your Story · Script · Q&A</span>
+ <h2><span class="n">04</span>เล่าประสบการณ์ของแก้มยังไงให้ทีมเชื่อ</h2>
+ <p class="sub">ข่าวดีคือทีมไม่ได้อยากฟังอะไรยาก ๆ หลัก ๆ อยากรู้แค่ 3 อย่าง: เคยทำโปรเจกต์อะไรที่เกี่ยวกับอินฟลูบ้าง (งานฟรีหรือได้เงินก็ได้) ตอนนั้นทำหน้าที่อะไร รับผิดชอบแค่ไหน และถ้ามี ผลเป็นยังไงแบบง่าย ๆ ไม่ต้องมีตัวเลข</p>
+
+ <h3><span class="i">A</span>Framework 4 ช่อง: โปรเจกต์ → หน้าที่ → สิ่งที่ทำ → ผล</h3>
+ <div class="prr">
+  <div><div class="k">Project</div><h4>ทำงานอะไร</h4><p>แบรนด์หรืองานอะไร ช่วงไหน เป็นงานฟรีหรือได้เงิน</p></div>
+  <div><div class="k">Role</div><h4>หน้าที่ของเรา</h4><p>เป็นคนประสาน คนหา หรือคนดูคอนเทนต์ รับผิดชอบส่วนไหน</p></div>
+  <div><div class="k">What I did</div><h4>ลงมือทำอะไร</h4><p>2–3 อย่างที่ทำจริง เช่น ทักเพื่อน คุยเงื่อนไข ตามงาน</p></div>
+  <div><div class="k">Result</div><h4>ผลแบบประโยคเดียว</h4><p>เช่น "ร้านบอกว่าคนมาเยอะขึ้น" ไม่ต้องมีตัวเลข</p></div>
+ </div>
+
+ <h4 style="margin-top:22px">ลองกรอกของแก้มเอง (กรอกได้ในหน้านี้เลย)</h4>
+ <div class="tw edit"><table id="story">
+  <thead><tr><th>#</th><th>Project</th><th>Role</th><th>What I did</th><th>Result (1 บรรทัด)</th></tr></thead>
+  <tbody>
+   <tr><td>1</td><td contenteditable data-ph="เช่น ช่วยแบรนด์ที่รู้จักหาอินฟลูมารีวิว"></td><td contenteditable data-ph="เช่น คนประสานระหว่างแบรนด์กับเพื่อนอินฟลู"></td><td contenteditable data-ph="เช่น แนะนำเพื่อน 3 คน คุยเงื่อนไข ตามให้โพสต์"></td><td contenteditable data-ph="เช่น แบรนด์ชอบ ได้รีวิวตามที่อยากได้"></td></tr>
+   <tr><td>2</td><td contenteditable data-ph="เช่น งานคอนเทนต์ของแบรนด์ที่ทำอยู่"></td><td contenteditable data-ph="เช่น ดูแลคอนเทนต์และ Production"></td><td contenteditable data-ph="เช่น เขียนบรีฟ คุมถ่าย ตรวจงานตัดต่อ"></td><td contenteditable data-ph="เช่น คอนเทนต์ออกตรงเวลา คนดูชอบ"></td></tr>
+   <tr><td>3</td><td contenteditable data-ph="งานอื่นที่เกี่ยว"></td><td contenteditable data-ph=""></td><td contenteditable data-ph=""></td><td contenteditable data-ph=""></td></tr>
+  </tbody>
+ </table></div>
+ <div class="tools"><button class="btn" id="copystory">คัดลอกตาราง</button><button class="btn" id="clrstory">ล้างตาราง</button></div>
+
+ <h3><span class="i b">B</span>ตัวอย่างคำตอบ (ปรับเป็นเรื่องจริงของแก้ม)</h3>
+ <div class="grid g2">
+  <div class="card"><span class="pill or">เรื่องที่ 1 · ดีลเพื่อนอินฟลูให้แบรนด์</span>
+   <p style="margin-top:10px">Project: มีแบรนด์ที่รู้จักอยากได้อินฟลูมารีวิว เลยช่วยดีลเพื่อนที่เป็นอินฟลูให้ (ทำแบบไม่ได้จริงจัง)</p>
+   <p>Role: เป็นคนกลาง ดูแลตั้งแต่แนะนำคนจนเพื่อนโพสต์</p>
+   <p>What I did: เลือกเพื่อนที่สายตรงกับสินค้า คุยเงื่อนไขให้ทั้งสองฝั่ง ตามจนโพสต์ขึ้น</p>
+   <p>Result: "แบรนด์ชอบนะคะ ได้รีวิวตามที่อยากได้ แล้วก็มีคนสนใจทักไปถามเยอะ"</p></div>
+  <div class="card"><span class="pill bl">เรื่องที่ 2 · งานคอนเทนต์ฝั่งแบรนด์</span>
+   <p style="margin-top:10px">Project: งาน Marketing และคอนเทนต์ของแบรนด์ที่ทำอยู่</p>
+   <p>Role: Senior Marketing ดูแลคอนเทนต์ Production ถ่ายภาพ และตัดต่อ</p>
+   <p>What I did: วางคอนเซปต์ บรีฟทีมถ่าย ตรวจงานก่อนโพสต์ ให้ตรงกับแบรนด์</p>
+   <p>Result: "งานออกตรงเวลา และหนูดูออกเลยว่าคลิปไหนตรงบรีฟ คลิปไหนต้องแก้"</p></div>
+ </div>
+ <div class="note tip"><span class="ic">🔗</span><div>เคล็ดลับ: เรื่องที่ 2 ไม่ใช่งานอินฟลูตรง ๆ แต่ให้ผูกกลับมาที่งานนี้เสมอ เช่น "ทักษะเช็กคลิปตรงนี้ หนูเอามาช่วยทีมกรองสคริปต์และ Draft ของอินฟลูก่อนถึงมือทีมได้ค่ะ" และเล่าเฉพาะเรื่องจริงเท่านั้น ถ้าไม่แน่ใจตรงไหน พูดว่า "ประมาณ" ได้เลย</div></div>
+
+ <h3><span class="i y">C</span>สคริปต์แนะนำตัว (ประมาณ 1 นาที)</h3>
+ <div class="script">
+  <div class="lab">Self-intro · ปรับคำให้เป็นแบบของแก้ม</div>
+  สวัสดีค่ะ แก้มนะคะ ตอนนี้ทำ <mark>Senior Marketing</mark> อยู่ฝั่งแบรนด์ ดูแลคอนเทนต์ Production ถ่ายภาพ แล้วก็ตัดต่อเองด้วยค่ะ<br>
+  เรื่องอินฟลู แก้มยังไม่เคยทำเป็นงานจริงจัง แต่เคยช่วย <mark>ดีลเพื่อนที่เป็นอินฟลูให้แบรนด์</mark> ที่สนใจ ดูแลตั้งแต่เลือกคนจนโพสต์ขึ้น แล้วแบรนด์ก็พอใจค่ะ<br>
+  ตอนนี้แก้มรู้จักอินฟลูประมาณ <mark>X คน</mark> ส่วนใหญ่เป็น <mark>Nano กับ Micro สาย ___</mark> และมีบางคนที่สนิทพอจะทักได้เลยค่ะ<br>
+  สิ่งที่แก้มช่วยทีมได้แน่ ๆ คือ <mark>เช็กสคริปต์และคลิปก่อนส่งให้ทีม</mark> เพราะดูออกว่าตรงบรีฟไหม และแก้มรับผิดชอบงาน ตามงานจนจบค่ะ<br>
+  แก้มอยากขอเริ่มจาก <mark>งานขนาดเล็ก ใช้เพื่อนในเครือข่ายก่อน</mark> ทำให้ครบให้ดี แล้วค่อยขยายค่ะ
+ </div>
+
+ <h3><span class="i k">D</span>คำถามที่น่าจะโดนถาม และมุมตอบ</h3>
+ <div class="qa">
+  <details><summary>ไม่เคยทำ Influencer Marketing จริงจัง จะทำได้เหรอ</summary><div class="ans">ยอมรับตรง ๆ แล้วโยงไปที่จุดแข็ง: "ยังไม่เคยทำเต็มรูปแบบค่ะ แต่ขั้นตอนส่วนใหญ่ เช่น บรีฟ ตรวจสคริปต์ ตรวจคลิป ตามงาน เป็นสิ่งที่ทำอยู่แล้วฝั่งแบรนด์ ที่ต้องเรียนเพิ่มคือเรื่องเรตและการหาคน เลยขอเริ่มจากงานเล็กก่อนค่ะ"</div></details>
+  <details><summary>รู้จักอินฟลูคนไหนบ้าง อยู่ระดับไหน</summary><div class="ans">เปิดตารางแมป Tier ในพาร์ต 01 ให้ดูเลย บอกจำนวนแต่ละ Tier สายคอนเทนต์ และว่าใครสนิทระดับ A ที่ติดต่อได้ทันที</div></details>
+  <details><summary>ถ้าต้องหา 50 คน สำหรับใช้ 20 คน ไหวไหม</summary><div class="ans">ตอบอย่างจริงใจ: "ครั้งแรกขอตกลงจำนวนให้ชัดก่อนนะคะ ถ้าเป็นจำนวนนี้ หนูขอเวลา X วัน และขอเริ่มจากเครือข่ายตัวเองก่อน แล้วค่อยหาคนนอกเพิ่ม" การถามเรื่องตัวเลขก่อนทำให้ดูเป็นมืออาชีพ</div></details>
+  <details><summary>ถ้าอินฟลูส่งงานช้า หรือหายไป จะทำยังไง</summary><div class="ans">"หนูจะนัดวันส่งสคริปต์ วันส่ง Draft และวันโพสต์ไว้ตั้งแต่แรก ทักเตือนก่อนถึงกำหนด และเตรียมรายชื่อสำรองไว้ ถ้ามีใครหายจะแจ้งทีมทันทีพร้อมเสนอคนแทน"</div></details>
+  <details><summary>จะเช็กยังไงว่าอินฟลูมีคนตามจริง</summary><div class="ans">"ดูวิวเฉลี่ยคลิปช่วงหลังเทียบกับยอดผู้ติดตาม ดูว่าคอมเมนต์เป็นคนจริงไหม และขอแคปหน้า Insights ว่าคนดูเป็นใคร ถ้ายอดตามเยอะแต่วิวกับคอมเมนต์น้อยผิดปกติ หนูจะไม่เสนอค่ะ"</div></details>
+  <details><summary>ตอนตรวจคลิป จะดูอะไรบ้าง</summary><div class="ans">"ดูว่าพูดจุดขายครบตามบรีฟไหม ชื่อสินค้าถูกไหม สินค้าดูดีไหม ภาพเสียงชัดไหม 3 วินาทีแรกดึงคนไหม มีคำที่ห้ามพูดไหม และติด #ad หรือ Paid Partnership ถูกไหม" ตรงนี้คือจุดที่แก้มเด่นที่สุด พูดได้มั่นใจ</div></details>
+  <details><summary>อยากคิดค่าบริการเท่าไหร่</summary><div class="ans">ไม่ต้องรีบบอกตัวเลข ถามกลับก่อน: "ขอทราบจำนวนคน จำนวนรายชื่อที่ต้องหา และรอบแก้ก่อนได้ไหมคะ แล้วหนูจะคำนวณจากเวลาที่ต้องใช้จริง" แล้วใช้ตารางต้นทุนเวลาในพาร์ต 02 ไปคิด</div></details>
+  <details><summary>สนใจรูปแบบการจ้างแบบไหน</summary><div class="ans">"ตอนนี้หนูสนใจแบบเหมาค่าประสานงานจำนวนน้อย หรือ Barter ที่มีเกณฑ์ชัด เพราะความเสี่ยงต่ำ และได้เรียนรู้เรตจริง พอรู้ต้นทุนแล้วค่อยลองรับแบบเหมางบรวมค่ะ"</div></details>
+ </div>
+
+ <h3><span class="i">E</span>เช็กลิสต์ก่อนเข้าคุยกับทีม</h3>
+ <ul class="check card" style="padding:18px">
+  <li><label><input type="checkbox">กรอกตารางแมปเพื่อนอินฟลูเข้า Tier (อย่างน้อย 10 ชื่อ)</label></li>
+  <li><label><input type="checkbox">อธิบาย Tier, KOC กับ KOL และศัพท์หลัก เช่น Brief (ใบสั่งงาน), Deliverables (ชิ้นงานที่ต้องส่ง), ER (อัตราการมีส่วนร่วม) ได้ด้วยคำพูดตัวเอง</label></li>
+  <li><label><input type="checkbox">เล่า 3 รูปแบบการจ้างได้ และบอกได้ว่าอยากเริ่มแบบไหนเพราะอะไร</label></li>
+  <li><label><input type="checkbox">กรอก Framework 4 ช่องอย่างน้อย 2 เรื่อง</label></li>
+  <li><label><input type="checkbox">ซ้อมสคริปต์แนะนำตัว 1 นาที ออกเสียงจริงสัก 2–3 รอบ</label></li>
+  <li><label><input type="checkbox">เตรียมคำถามกลับไปถามทีม เช่น จำนวนรายชื่อ รอบแก้ สัดส่วน Tier</label></li>
+ </ul>
+ <div class="note cream" style="margin-top:18px"><span class="ic">🧡</span><div>ไม่ต้องรู้ทุกอย่างตั้งแต่วันแรก ทีมอยากเห็นแค่ว่าแก้มเข้าใจพื้นฐาน รู้จักคนจริง และรับผิดชอบงานได้ ซึ่งแก้มมีครบอยู่แล้ว เตรียมตามนี้แล้วไปคุยแบบสบาย ๆ ได้เลย สู้ ๆ นะ</div></div>
+</div></section>
+
+<footer>
+ <div class="pop orange float" style="left:6%;bottom:30px;width:80px;height:80px"></div>
+ <div class="pop blue float" style="right:7%;top:30px;width:64px;height:64px;animation-delay:-2s"></div>
+ <div class="wrap">
+  <div class="credit">
+   <div class="ml">made with love by:</div>
+   <div class="nm">ก้อ ชวัฏ ตั้งบุญธินา</div>
+   <div class="en">Kho Schwat Tangboontina</div>
+   <div class="ro">Co-Founder & CGO, SIXSHEET / popcont.ai</div>
+  </div>
+ </div>
+</footer>
+<script>
+(function(){
+ var pr=document.getElementById('progress'),links=[].slice.call(document.querySelectorAll('.navl a'));
+ var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+ function onS(){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  var cur=-1;secs.forEach(function(s,i){if(s.getBoundingClientRect().top<120)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)});}
+ addEventListener('scroll',onS,{passive:true});onS();
+ var gq=document.getElementById('gq');gq.addEventListener('input',function(){var q=gq.value.trim().toLowerCase();
+  document.querySelectorAll('#gloss .term').forEach(function(t){t.style.display=!q||t.textContent.toLowerCase().indexOf(q)>-1?'':'none'})});
+ var ph=[['Nano','@friend_a','TikTok','8K','บิวตี้','A','สกินแคร์ 2 แบรนด์','รับ'],['Micro','@friend_b','IG','35K','อาหาร คาเฟ่','A','ร้านอาหาร','บางงาน'],['Micro','@friend_c','TikTok','60K','ไลฟ์สไตล์','B','-','ไม่รับ'],['Mid','@friend_d','TikTok + IG','150K','บิวตี้','B','หลายแบรนด์','ไม่รับ'],['KOC','@friend_e','IG','900','แม่และเด็ก','A','-','รับ']];
+ var tb=document.querySelector('#netmap tbody'),KEY='gam_netmap_v1',SK='gam_story_v1';
+ function renum(){[].forEach.call(tb.children,function(tr,i){tr.firstChild.textContent=i+1})}
+ function addRow(vals,i){var tr=document.createElement('tr');var h='<td></td>';for(var j=0;j<8;j++){h+='<td contenteditable data-ph="'+((ph[i]||[])[j]||'')+'"></td>'}tr.innerHTML=h;
+  if(vals){[].forEach.call(tr.querySelectorAll('td[contenteditable]'),function(td,j){td.textContent=vals[j]||''})}tb.appendChild(tr);renum();}
+ function rows(){return [].map.call(tb.children,function(tr){return [].map.call(tr.querySelectorAll('td[contenteditable]'),function(td){return td.textContent.trim()})})}
+ function save(){try{localStorage.setItem(KEY,JSON.stringify(rows()))}catch(e){}summ();}
+ var saved=null;try{saved=JSON.parse(localStorage.getItem(KEY)||'null')}catch(e){}
+ if(saved&&saved.length){saved.forEach(function(r,i){addRow(r,i)})}else{for(var i=0;i<8;i++)addRow(null,i)}
+ tb.addEventListener('input',save);
+ document.getElementById('addrow').onclick=function(){addRow(null,99);save()};
+ document.getElementById('clrmap').onclick=function(){if(confirm('ล้างข้อมูลในตารางนี้?')){tb.innerHTML='';for(var i=0;i<8;i++)addRow(null,i);save()}};
+ function copyT(sel){var t=[].map.call(document.querySelectorAll(sel+' tr'),function(tr){return [].map.call(tr.children,function(c){return c.textContent.replace(/[\t\n]/g,' ')}).join('\t')}).join('\n');
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){alert('คัดลอกแล้ว วางใน Excel หรือ Google Sheets ได้เลย')},function(){prompt('คัดลอกข้อความนี้',t)})}else{prompt('คัดลอกข้อความนี้',t)}}
+ document.getElementById('copymap').onclick=function(){copyT('#netmap')};
+ var tiers=[['KOC / Seeding',['koc','seed']],['Nano',['nano']],['Micro',['micro']],['Mid-tier',['mid']],['Macro',['macro']],['Mega / Celebrity',['mega','celeb','ดารา']]];
+ var use={'KOC / Seeding':'รีวิวกระจาย แลกของ','Nano':'Seeding, Barter, รีวิวจริงใจ','Micro':'แคมเปญหลัก คุ้มค่า','Mid-tier':'เพิ่มยอดคนเห็น','Macro':'สร้างการรับรู้กว้าง','Mega / Celebrity':'เปิดตัว สร้างกระแส'};
+ function summ(){var d=rows();
+  document.getElementById('tsum').innerHTML=tiers.map(function(t){var r=d.filter(function(x){var v=x[0].toLowerCase();return v&&t[1].some(function(k){return v.indexOf(k)>-1})});
+   var n={};r.forEach(function(x){if(x[4])n[x[4]]=1});var a=r.filter(function(x){return x[5].toUpperCase().charAt(0)==='A'}).length;
+   return '<tr><td>'+t[0]+'</td><td>'+r.length+'</td><td>'+(Object.keys(n).join(', ')||'-')+'</td><td>'+a+'</td><td>'+use[t[0]]+'</td></tr>'}).join('');}
+ summ();
+ var st=[].slice.call(document.querySelectorAll('#story td[contenteditable]'));
+ try{var s=JSON.parse(localStorage.getItem(SK)||'null');if(s)st.forEach(function(td,i){td.textContent=s[i]||''})}catch(e){}
+ document.getElementById('story').addEventListener('input',function(){try{localStorage.setItem(SK,JSON.stringify(st.map(function(t){return t.textContent})))}catch(e){}});
+ document.getElementById('copystory').onclick=function(){copyT('#story')};
+ document.getElementById('clrstory').onclick=function(){if(confirm('ล้างข้อมูลในตารางนี้?')){st.forEach(function(t){t.textContent=''});try{localStorage.removeItem(SK)}catch(e){}}};
+})();
+</script>
+</body>
+</html>
